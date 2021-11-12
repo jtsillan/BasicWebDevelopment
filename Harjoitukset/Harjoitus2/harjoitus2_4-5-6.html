@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles_new.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Harjoitus2_4-5-6</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li class="logo"><a href="#">Kiipeilyn maailma</a></li>
+            <li class="item"><a href="#">Koti</a></li>
+            <li class="item"><a href="#">Kuka</a></li>
+            <li class="item has-submenu">
+                <a tabindex="0">Mitä</a>
+                <ul class="submenu">
+                    <li class="subitem"><a href="#">Paikat</a></li>
+                    <li class="subitem"><a href="#">Greidit</a></li>
+                    <li class="subitem"><a href="#">Lajit</a></li>
+                </ul>
+            </li>
+            <li class="item has-submenu">
+                <a tabindex="0">Häh</a>
+                <ul class="submenu">
+                    <li class="subitem"><a href="#">Miksi</a></li>
+                    <li class="subitem"><a href="#">Miten</a></li>
+                    <li class="subitem"><a href="#">Missä</a></li>
+                </ul>
+            </li>
+            <li class="item"><a href="#">Blogi</a></li>
+            <li class="item"><a href="#">Yhteys</a>
+            </li>
+            <li class="item button"><a href="#">KIRJAUDU</a></li>
+            <li class="item button secondary"><a href="#">Rekisteröidy</a></li>
+            <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </nav>
+    <div class="parallax1">
+      <div class="caption">
+        <span class="border">TERVETULOA</span>
+      </div>
+    </div>
+    
+    <div class="row">
+      <h2>PORTFOLIO</h2>
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Näytä kaikki</button>
+        <button class="btn" onclick="filterSelection('alaska')"> Alaska</button>
+        <button class="btn" onclick="filterSelection('finland')"> Suomi</button>
+        <button class="btn" onclick="filterSelection('sweden')"> Ruotsi</button>
+      </div>  
+      <div class="column1 alaska">
+          <div class="content">
+          <img src="alaska.JPG" alt="Mountains" style="width:100%">
+          <h4>Mt Hunter, Alaska</h4>
+          </div>
+      </div>
+      <div class="column1 alaska">
+          <div class="content">
+          <img src="alaska2.JPG" alt="Lights" style="width:100%">
+          <h4>Mini Moonflower, Alaska</h4>
+          </div>
+      </div>
+      <div class="column1 alaska">
+          <div class="content">
+          <img src="alaska3.JPG" alt="Nature" style="width:100%">
+          <h4>Mini Moonflower, Alaska</h4>
+          </div>
+      </div>
+      <div class="column1 alaska">
+          <div class="content">
+          <img src="alaska4.JPG" alt="Mountains" style="width:100%">
+          <h4>Mt Hunter, Alaska</h4>
+          </div>
+      </div>
+      <div class="column1 alaska">
+          <div class="content">
+          <img src="alaska5.JPG" alt="Mountains" style="width:100%">
+          <h4>Mt Hunter, Alaska</h4>
+          </div>
+      </div>  
+      <div class="column1 alaska">
+          <div class="content">
+          <img src="alaska6.JPG" alt="Mountains" style="width:100%">
+          <h4>Mt Hunter, Alaska</h4>
+          </div>
+      </div> 
+      <div class="column1 sweden">
+          <div class="content">
+          <img src="stora.JPG" alt="Mountains" style="width:100%">
+          <h4>Stora Sjöfallet, Ruotsi</h4>
+          </div>
+      </div> 
+      <div class="column1 sweden">
+          <div class="content">
+          <img src="stora2.JPG" alt="Mountains" style="width:100%">
+          <h4>Stora Sjöfallet, Ruotsi</h4>
+          </div>
+      </div>
+      <div class="column1 finland">
+        <div class="content">
+        <img src="koro1.JPG" alt="Mountains" style="width:100%">
+        <h4>Korouoma, Suomi</h4>
+        </div>
+      </div>
+      <div class="column1 finland">
+        <div class="content">
+        <img src="koro2.JPG" alt="Mountains" style="width:100%">
+        <h4>Korouoma, Suomi</h4>
+      </div>
+    </div>      
+    </div>        
+    <div class="parallax2"></div>
+    <div class="grid-container">
+        <div class="item-main">
+            <h2 style="text-align:center">GALLERIA, KLIKKAA AUKI</h2>          
+            <div class="row">
+              <div class="column">
+                <img src="lofootit.JPG" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">               
+              </div>
+              <div class="column">
+                <img src="stora.JPG" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+              </div>
+              <div class="column">
+                <img src="flågbekken.JPG" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+              </div>
+              <div class="column">
+                <img src="koro1.JPG" style="width: 100%;" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+              </div>
+              <div class="column">
+                <img src="stora2.JPG" style="width: 100%;" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+              </div>
+              <div class="column">
+                <img src="koro2.JPG" style="width: 100%;" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+              </div>
+              <div class="column">
+                <img src="alaska2.JPG" style="width: 100%;" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+              </div>
+              <div class="column">
+                <img src="alaska3.JPG" style="width: 100%;" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+              </div>
+              <div class="column">
+                <img src="alaska4.JPG" style="width: 100%;" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+              </div>
+              <div class="column">
+                <img src="alaska5.JPG" style="width: 100%;" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+              </div>
+            </div>            
+            <div id="myModal" class="modal">
+              <span class="close cursor" onclick="closeModal()">&times;</span>
+              <div class="modal-content">
+            
+                <div class="mySlides">
+                  <div class="numbertext">1 / 10</div>
+                  <img src="lofootit.JPG" style="width:100%">
+                </div>
+            
+                <div class="mySlides">
+                  <div class="numbertext">2 / 10</div>
+                  <img src="stora.JPG" style="width:100%">
+                </div>
+            
+                <div class="mySlides">
+                  <div class="numbertext">3 / 10</div>
+                  <img src="flågbekken.JPG" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                  <div class="numbertext">4 / 10</div>
+                  <img src="koro1.JPG" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">5 / 10</div>
+                    <img src="stora2.JPG" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">6 / 10</div>
+                    <img src="koro2.JPG" style="width:100%">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">7 / 10</div>
+                  <img src="alaska2.JPG" style="width:100%">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">8 / 10</div>
+                  <img src="alaska3.JPG" style="width:100%">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">9 / 10</div>
+                  <img src="alaska4.JPG" style="width:100%">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">10 / 10</div>
+                  <img src="alaska5.JPG" style="width:100%">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+                <div class="caption-container">
+                  <p id="caption"></p>
+                </div>            
+            
+                <div class="column">
+                  <img class="demo cursor" src="lofootit.JPG" style="width:100%" onclick="currentSlide(1)" alt="Climbing in Lofoten">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="stora.JPG" style="width:100%" onclick="currentSlide(2)" alt="Ice climbing in Stora Sjöfallet">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="flågbekken.JPG" style="width:100%" onclick="currentSlide(3)" alt="Ice is nice!">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="koro1.JPG" style="width:100%" onclick="currentSlide(4)" alt="Jaska Jokunen in Korouoma">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="stora2.JPG" style="width:100%" onclick="currentSlide(5)" alt="Grevinnan in Stora Sjöfallet">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="koro2.JPG" style="width:100%" onclick="currentSlide(6)" alt="Onnekas in Korouoma">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="alaska2.JPG" style="width:100%" onclick="currentSlide(7)" alt="Minimoonflower in Alaska">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="alaska3.JPG" style="width:100%" onclick="currentSlide(8)" alt="Halo in the sky">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="alaska4.JPG" style="width:100%" onclick="currentSlide(9)" alt="Big couloir of Grison-Tedeshi">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="alaska5.JPG" style="width:100%" onclick="currentSlide(10)" alt="Upper snow ridges of Mt Hunter">
+                </div>
+              </div>
+            </div>            
+        </div>
+    </div>
+    <div class="parallax3"></div>
+    <div class="grid-container">
+      <div class="main" style="background-color: rgb(37,55,58)">
+        <h2 style="color: white;">JÄSENEDUT</h2>
+        <div class="columns">
+          <ul class="price">
+            <li class="header">Pummi</li>
+            <li class="grey">Ilmainen</li>
+            <li>Ei töitä</li>
+            <li>Ansiosidonnainen</li>
+            <li>Voi reissata</li>
+            <li>Renault Trafic</li>
+            <li class="grey"><a href="#" class="button-prize">Mieti vielä</a></li>
+          </ul>
+        </div>
+        
+        <div class="columns">
+          <ul class="price">
+            <li class="header" style="background-color:#04AA6D">Perusjäbä</li>
+            <li class="grey">€ 2000 / vuodessa</li>
+            <li>Hanttihommia</li>
+            <li>Paska liksa</li>
+            <li>Ei vapaita</li>
+            <li>Toyota Corolla</li>
+            <li class="grey"><a href="#" class="button-prize">Ei kannata</a></li>
+          </ul>
+        </div>
+        
+        <div class="columns">
+          <ul class="price">
+            <li class="header">Äijä</li>
+            <li class="grey">€ 50000 / vuodessa</li>
+            <li>Insinööri</li>
+            <li>Vitusti massia</li>
+            <li>Vapaata tarvittaessa</li>
+            <li>Ford Transit</li>
+            <li class="grey"><a href="#" class="button-prize">Mitä odotat!?</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="parallax4"></div>
+    <div class="grid-container">
+        <div class="item-footer">          
+          <a href="#" class="fa fa-linkedin"></a>
+          <a href="#" class="fa fa-youtube"></a>
+          <a href="https://www.instagram.com/kiipeilypummi/" title="Kiipeilypummi" class="fa fa-instagram"></a>
+          <h2>Kiipeilysivut by Juha Sillanpää</h2>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>

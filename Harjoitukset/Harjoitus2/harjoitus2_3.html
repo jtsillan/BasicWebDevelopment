@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Harjoitus2_3</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input[type=text], select, textarea {
+  width: 300px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit], input[type=reset] {
+  background-color: #5a5c5a;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+}
+
+input[type=submit]:hover, [type=reset]:hover {
+  background-color: #4586a0;
+}
+
+input[type=text]:focus{
+  background-color: rgb(230, 222, 222);
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75 {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <form>
+  <div class="row">
+    <div class="col-25">
+      <label for="bday">Etunimi:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="bday" name="firstname">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Sukunimi:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="lname" name="lastname">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="email">Sposti:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="email" name="email">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="faculty">Koulutusohjelma:</label>
+    </div>
+    <div class="col-75">
+      <select id="faculty" name="faculty">
+        <option value="ict">Tietotekniikka</option>
+        <option value="fysio">Fysioterapia</option>
+        <option value="foresty">Metsätalous</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="sex">Sukupuoli</label>
+    </div>
+    <div class="col-75">
+        <input type="radio" id="man" name="sex" value="man">
+        <label for="man">Mies</label><br>
+        <input type="radio" id="woman" name="sex" value="woman">
+        <label for="woman">Nainen</label><br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="bday">Syntymäpäivä:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="bday" name="dateOfBirth" placeholder="mm/dd/yyyy">
+    </div>
+  </div>
+  <br>
+  <br>
+  <table>
+    <label>Osallistun seuraaville opintojaksoille:</label><br>
+      <input type="checkbox" id="course1" name="course1" value="programing">
+      <label for="course1"> Ohjelmoinnin perusteet</label><br>
+      <input type="checkbox" id="course2" name="course2" value="web">
+      <label for="course2"> Web-kehitys</label><br>
+      <input type="checkbox" id="course3" name="course3" value="project">
+      <label for="course3"> Projekti</label><br><br>   
+    </table>
+    <label for="info">Muuta tärkeää tietoa:</label><br>
+      <textarea id="text" name="subject" style="height:200px"></textarea>
+    <br>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </form>
+  </div>
+</body>
+</html>
