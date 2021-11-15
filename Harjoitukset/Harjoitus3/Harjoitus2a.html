@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+    <h2>Testing how to change the text and style of an element on the page</h2>
+    <p>Give the following value and count the sum.</p>
+    <p>x = <input id="numb1"></p>
+    <p>y = <input id="numb2"></p>
+    <button type="button" onclick="myFunction()">x+y</button>
+    <p id="count"></p>
+    <script>
+        function myFunction() {
+            x = document.getElementById('numb1').innerHTML;
+            y = document.getElementById('numb2').innerHTML;
+            z = x + y;
+            document.getElementById('count').innerHTML=
+            "The value of x+y is:" + z;
+        }
+    </script>
+    </body>
+</html>

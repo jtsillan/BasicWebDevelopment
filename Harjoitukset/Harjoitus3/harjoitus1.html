@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+    <h2>Testing how to change the text and style of an element on the page</h2>
+    <p id="change">Mickey Mouse</p>
+    <button type="button" onclick="changeText()">Change name!</button>
+    <button type="button" onclick="changeColor()">Change color!</button>
+    <button type="button" onclick="changeTextBack()">Back to orginal name</button>
+    <button type="button" onclick='changeColorBack()'>Back to orginal color</button>
+    <button type="button" onclick='changeOrginal()'>Back to orginal</button>
+    <script>
+        function changeText() {
+            document.getElementById("change").innerHTML = "Donald Duck"
+        }
+        function changeColor() {
+            document.getElementById("change").style.background = "red"              
+        }
+        function changeTextBack() {
+            document.getElementById("change").innerHTML = "Mickey Mouse"
+        }
+        function changeColorBack() {
+            document.getElementById("change").style.background = "white"
+        }
+        function changeOrginal() {
+            document.getElementById("change").style.background = "white"
+            document.getElementById("change").innerHTML = "Mickey Mouse"
+        }
+    </script>
+    </body>
+</html>
