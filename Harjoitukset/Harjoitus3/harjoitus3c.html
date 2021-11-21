@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>harjoitus3c</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            border-spacing: 0;            
+            border: 1px solid #000;
+        }
+        th, td{
+            padding: 10px 20px;
+            text-align: left;
+            border: 1px solid #000;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+    </style>
+
+</head>
+<body>
+    
+<h2>Taulukkoon tulostettu 'var library':</h2>
+
+<br><br>
+<table></table>
+<script>
+
+var library = [  
+    { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254}, 
+    { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264}, 
+    { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245} 
+];
+
+function generateTableHead(table, data) {
+    let thead = table.createTHead();
+    let row = thead.insertRow();
+    for (let key of data) {
+        let th = document.createElement("th");
+        let text = document.createTextNode(key);
+        th.appendChild(text);
+        row.appendChild(th);
+    }
+}
+
+function generateTable(table, data) {
+    for (let element of data) {
+        let row = table.insertRow();
+        for (key in element) {
+            let cell = row.insertCell();
+            let text = document.createTextNode(element[key]);
+            cell.appendChild(text);
+        }
+    }
+}
+
+let table = document.querySelector("table");
+let data = Object.keys(library[0]);
+generateTable(table, library);
+generateTableHead(table, data);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+    <h2>Päivämäärälaskuri</h2>
+    <p>Laskee kahden päivämäärän eron.</p>
+
+    <label for="day1">Päivämäärä 1: </label>
+    <input type="date" id="day1" name="day1"><br>
+    <br>
+    <label for="day1">Päivämäärä 2: </label>
+    <input type="date" id="day2" name="day2"><br>
+    <br>
+    <button onclick="calender()">Laske päivämäärien erotus</button><br>
+
+    <p id="show"></p>
+
+    <script>
+        function calender() {
+            let numb1 = document.getElementById("day1").value;
+            let numb2 = document.getElementById("day2").value;
+            let sum = (Date.parse(numb1) - Date.parse(numb2)) / (1000 * 60 * 60 * 24);
+
+            document.getElementById("show").innerHTML =
+            "Päivämäärien eroitus on: " + sum + " päivää.";
+        }
+    </script>
+    </body>
+</html>

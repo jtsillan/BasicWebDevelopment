@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Kesäpäivän lämpötila</h2>
+
+<p>Syötä lämpötila:</p>
+
+<input id="temp" />
+
+<button onclick="myFunction()">Näytä</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let temp = document.getElementById("temp").value;
+  if (temp >= 0 && temp <= 10) {
+    document.getElementById("demo").innerHTML = "KYLMÄÄ";    
+  }
+  else if (temp >= 11 && temp <= 15) {
+    document.getElementById("demo").innerHTML = "KOLEAA";
+  }
+  else if (temp >= 16 && temp <= 20) {
+    document.getElementById("demo").innerHTML = "MELKO LÄMMINTÄ";
+  }
+  else if (temp >= 21 && temp <= 25) {
+    document.getElementById("demo").innerHTML = "LÄMMINTÄ";
+  }
+  else if (temp >= 26 && temp <= 30) {
+    document.getElementById("demo").innerHTML = "HELLETTÄ";
+  }
+}
+</script>
+
+</body>
+</html>

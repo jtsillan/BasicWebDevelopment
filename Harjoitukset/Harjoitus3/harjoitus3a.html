@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Objects</h2>
+<p>Tulostaa tiedostossa olevan henkilön tiedot alla olevalle riville.</p>
+
+<p id="sdnt"></p>
+
+<script>
+var student = {
+  fName: "John",
+  lName: "Doe",
+  id: 123456,
+  age: 48,
+  fullInfo: function() {
+    return this.fName + " " + this.lName + " " + this.age +
+    " " + this.id;
+  }
+};
+
+document.getElementById("sdnt").innerHTML = student.fullInfo();
+</script>
+
+</body>
+</html>

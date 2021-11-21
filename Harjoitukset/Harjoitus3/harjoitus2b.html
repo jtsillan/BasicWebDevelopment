@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Lämpötilan muunnos</h2>
+
+<p>Muuttaa syötetyn Fahtenheit lämpötilan ja palauttaa sen celsius asteina.</p>
+
+<label for="text">F = </label>
+<input type="text" id="temp"><br>
+
+<button type="button" onclick="myFunction()">Laske</button><br>
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let f = document.getElementById("temp").value;
+  let sum = (parseInt(f) - 32) * 5/9;
+  document.getElementById("demo").innerHTML = "Celsiusastetta: " + sum + " c.";
+
+}
+
+</script>
+
+</body>
+</html>

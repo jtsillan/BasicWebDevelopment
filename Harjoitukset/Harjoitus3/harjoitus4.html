@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+    <h2>Minilaskin</h2>
+
+    <p>Syötä lukuarvot alla oleviin kentiin ja paina nappia.</p>
+    
+    <label>x : </label>
+    <input type="text" id="numb1"><br>
+    <label>y : </label>
+    <input type="text" id="numb2"><br>
+    <br>
+    <button type="button" onclick="minus()"> - </button>
+    <button type="button" onclick="plus()"> + </button>
+    <button type="button" onclick="times()"> x </button>
+    <button type="button" onclick="modulus()"> % </button><br>
+    <button type="button" onclick="sqrt()">Neliöjuuri</button>
+    <button type="button" onclick="pow()">Potenssi</button><br>
+    <br>
+    <p id="count"></p>
+
+    <script>
+        function minus() {
+            let x = document.getElementById("numb1").value;
+            let y = document.getElementById("numb2").value;        
+            let sum = parseInt(x) - parseInt(y);
+            document.getElementById("count").innerHTML =
+            "Tulos on: " + sum;
+        }
+        function plus() {
+            let x = document.getElementById("numb1").value;
+            let y = document.getElementById("numb2").value;        
+            let sum = parseInt(x) + parseInt(y);
+            document.getElementById("count").innerHTML =
+            "Tulos on: " + sum;
+        }    
+        function times() {
+            let x = document.getElementById("numb1").value;
+            let y = document.getElementById("numb2").value;        
+            let sum = parseInt(x) * parseInt(y);
+            document.getElementById("count").innerHTML =
+            "Tulos on: " + sum;
+        }      
+        function modulus() {
+            let x = document.getElementById("numb1").value;
+            let y = document.getElementById("numb2").value;        
+            let sum = parseInt(x) % parseInt(y);
+            document.getElementById("count").innerHTML =
+            "Jakojäännös on: " + sum;
+        } 
+        function sqrt() {
+            let x = document.getElementById("numb1").value;
+            let y = document.getElementById("numb2").value;        
+            let sum = parseInt(x) + parseInt(y);
+            document.getElementById("count").innerHTML =
+            "Lukujen yhteenlaskettu neliöjuuri: " + Math.sqrt(sum);
+        } 
+        function pow() {
+            let x = document.getElementById("numb1").value;
+            let y = document.getElementById("numb2").value;        
+            let sum = parseInt(x) ** parseInt(y);
+            document.getElementById("count").innerHTML =
+            "Luku x potenssiin y: " + sum;
+        } 
+    </script>
+    </body>
+</html>

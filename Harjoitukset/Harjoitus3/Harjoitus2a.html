@@ -3,17 +3,25 @@
     <body>
     <h2>Testing how to change the text and style of an element on the page</h2>
     <p>Give the following value and count the sum.</p>
-    <p>x = <input id="numb1"></p>
-    <p>y = <input id="numb2"></p>
-    <button type="button" onclick="myFunction()">x+y</button>
+
+    <label for="text">x = </label>
+    <input type="text" id="numb1"><br>
+
+    <label for="text">y = </label>
+    <input type="text" id="numb2"><br>
+
+    <button type="button" onclick="myFunction()">x+y</button><br>
+
     <p id="count"></p>
+
     <script>
         function myFunction() {
-            x = document.getElementById('numb1').innerHTML;
-            y = document.getElementById('numb2').innerHTML;
-            z = x + y;
-            document.getElementById('count').innerHTML=
-            "The value of x+y is:" + z;
+            let x = document.getElementById("numb1").value;
+            let y = document.getElementById("numb2").value;
+            let sum = parseInt(x) + parseInt(y);
+
+            document.getElementById("count").innerHTML =
+            "The value of x+y: " + sum;
         }
     </script>
     </body>

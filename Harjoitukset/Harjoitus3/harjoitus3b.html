@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript For Loop</h2>
+<p>Ohjelma tulostaa alla oleville riville tiedostossa olevat 'var kurssit' tiedot:</p>
+
+<p id="courses"></p>
+
+<script>
+var kurssit = ["Ohjelmointi", "Elektroniikka", "English", "Matematiikka"];
+
+let text = "";
+for (let i = 0; i < kurssit.length; i++) {
+  text += kurssit[i] + "<br>";
+}
+
+document.getElementById("courses").innerHTML = text;
+</script>
+
+</body>
+</html>
