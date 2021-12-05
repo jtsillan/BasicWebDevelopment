@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    table, tr, td {
+        border: 1px solid black;
+    }
+</style>
+</head>
+<body>
+
+<h2>Cars table</h2>
+
+<p>More ratings, please press the button.</p>
+
+<p id="demo"></p>
+<button type="button" id="myCheckBox" title="Lisää tietoja" onclick="mySortFunc()">All ratings</button><br>
+<br>
+<table id="myTable"></table>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('#myCheckBox').addEventListener('change', 
+        checkChanged);
+    })
+
+    function checkChanged() {
+        if(this.checked) {
+        console.log("checked")
+        }
+        else
+        {
+        console.log("not checked")
+        }
+    }
+
+    var carsJSON = '   {  '  + 
+    '       "data" : [{   '  + 
+    '           "manufacturer" : "Porsche",  '  + 
+    '           "model" : "911",  '  + 
+    '           "price" : 135000,  '  + 
+    '           "quality" : [{   '  + 
+    '               "name" : "overall",  '  + 
+    '               "rating" : 3  '  + 
+    '           },{   '  + 
+    '               "name" : "mechanical",  '  + 
+    '               "rating" : 4  '  + 
+    '           },{   '  + 
+    '               "name" : "powertrain",  '  + 
+    '               "rating" : 2  '  + 
+    '           },{   '  + 
+    '               "name" : "body",  '  + 
+    '               "rating" : 4  '  + 
+    '           },{   '  + 
+    '               "name" : "interior",  '  + 
+    '               "rating" : 3  '  + 
+    '           },{   '  + 
+    '               "name" : "accessories",  '  + 
+    '               "rating" : 2  '  + 
+    '           }],  '  + 
+    '           "wiki" : "http://en.wikipedia.org/wiki/Porsche_997"  '  + 
+    '       },{   '  + 
+    '           "manufacturer" : "Nissan",  '  + 
+    '           "model" : "GT-R",  '  + 
+    '           "price" : 80000,  '  + 
+    '           "quality" : [{   '  + 
+    '               "name" : "overall",  '  + 
+    '                 "rating" : 2  '  + 
+    '               },  '  + 
+    '               { "name" : "mechanical",  '  + 
+    '                 "rating" : 3  '  + 
+    '               },  '  + 
+    '               { "name" : "powertrain",  '  + 
+    '                 "rating" : 5  '  + 
+    '               },  '  + 
+    '               { "name" : "body",  '  + 
+    '                 "rating" : 4  '  + 
+    '               },  '  + 
+    '               { "name" : "interior",  '  + 
+    '                 "rating" : 2  '  + 
+    '               },  '  + 
+    '               { "name" : "accessories",  '  + 
+    '                 "rating" : 2  '  + 
+    '               }  '  + 
+    '           ],  '  + 
+    '           "wiki" : "http://en.wikipedia.org/wiki/Nissan_Gt-r"  '  + 
+    '       },{  '  + 
+    '           "manufacturer" : "BMW",  '  + 
+    '           "model" : "M3",  '  + 
+    '           "price" : 60500,  '  + 
+    '           "quality" : [ { "name" : "overall",  '  + 
+    '                 "rating" : 3  '  + 
+    '               },  '  + 
+    '               { "name" : "mechanical",  '  + 
+    '                 "rating" : 5  '  + 
+    '               },  '  + 
+    '               { "name" : "powertrain",  '  + 
+    '                 "rating" : 3  '  + 
+    '               },  '  + 
+    '               { "name" : "body",  '  + 
+    '                 "rating" : 4  '  + 
+    '               },  '  + 
+    '               { "name" : "interior",  '  + 
+    '                 "rating" : 5  '  + 
+    '               },  '  + 
+    '               { "name" : "accessories",  '  + 
+    '                 "rating" : 3  '  + 
+    '               }  '  + 
+    '           ],  '  + 
+    '           "wiki" : "http://en.wikipedia.org/wiki/Bmw_m3"  '  + 
+    '       },{   '  + 
+    '           "manufacturer" : "Audi",  '  + 
+    '           "model" : "S5",  '  + 
+    '           "price" : 53000,  '  + 
+    '           "quality" : [ { "name" : "overall",  '  + 
+    '                 "rating" : 4  '  + 
+    '               },  '  + 
+    '               { "name" : "mechanical",  '  + 
+    '                 "rating" : 1  '  + 
+    '               },  '  + 
+    '               { "name" : "powertrain",  '  + 
+    '                 "rating" : 1  '  + 
+    '               },  '  + 
+    '               { "name" : "body",  '  + 
+    '                 "rating" : 4  '  + 
+    '               },  '  + 
+    '               { "name" : "interior",  '  + 
+    '                 "rating" : 1  '  + 
+    '               },  '  + 
+    '               { "name" : "accessories",  '  + 
+    '                 "rating" : 5  '  + 
+    '               }  '  + 
+    '           ],  '  + 
+    '           "wiki" : "http://en.wikipedia.org/wiki/Audi_S5#Audi_S5"  '  + 
+    '       },{   '  + 
+    '           "manufacturer" : "Audi",  '  + 
+    '           "model" : "TT",  '  + 
+    '           "price" : 40000,  '  + 
+    '           "quality" : [{   '  + 
+    '               "name" : "overall",  '  + 
+    '                 "rating" : 5  '  + 
+    '               },  '  + 
+    '               { "name" : "mechanical",  '  + 
+    '                 "rating" : 2  '  + 
+    '               },  '  + 
+    '               { "name" : "powertrain",  '  + 
+    '                 "rating" : 2  '  + 
+    '               },  '  + 
+    '               { "name" : "body",  '  + 
+    '                 "rating" : 3  '  + 
+    '               },  '  + 
+    '               { "name" : "interior",  '  + 
+    '                 "rating" : 4  '  + 
+    '               },  '  + 
+    '               { "name" : "accessories",  '  + 
+    '                 "rating" : 1  '  + 
+    '               }  '  + 
+    '           ],  '  + 
+    '           "wiki" : "http://en.wikipedia.org/wiki/Audi_TT"  '  + 
+    '       }]  '  + 
+    '  }  ' ; 
+
+    var cars = JSON.parse(carsJSON); 
+    var text = "<td>Car</td><td>Model</td><td>Price</td><td>Wikipedia link</td><td>Overall quality</td>";
+    for (i in cars.data) {
+        text = text + "<tr><td>" + cars.data[i].manufacturer + "</td><td>" + cars.data[i].model + "</td><td>" +
+            cars.data[i].price + "</td><td>" + cars.data[i].wiki + "</td><td>" + cars.data[i].quality[0].rating + "</tr>";
+    }
+    document.getElementById("myTable").innerHTML = text;
+
+/*    function mySortFunc() {
+        let textNew = text + "<td>Mechanical quality</td><td>Powertrain quality</td><td>Body quality</td><td>Interior quality</td><td>Accessories";
+        for (x in cars.data) {
+            textNew = textNew + "<tr><td>" + cars.data[x].manufacturer + "</td><td>" + cars.data[x].model + "</td><td>" + cars.data[x].price +
+                "</td><td>" + cars.data[x].wiki + "</td>";
+        }
+        for (y in cars.data[x].quality) {
+            textNew = textNew + "<td>" + cars.data[x].quality[y].rating + "</td>";
+        }
+        document.getElementById("myTable").innerHTML = textNew;
+    }
+    
+
+    // Just an example how to refer to an element inside the data array
+    //console.log("cars = " + cars.data[0].manufacturer);
+
+ /*   function myFunction() {
+        for (i in cars) {
+            text += "<th><td>" + cars[i].manufacturer + "</td></tr>" + cars[i].model + "</td></tr>" +
+                cars[i].price + "</td></tr>" + cars[i].quality;
+        }
+    }*/
+   
+</script>
+
+</body>
+</html>

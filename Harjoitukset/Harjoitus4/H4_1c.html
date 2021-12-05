@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            table, td {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Products</h2>
+        <table id="myTable"></table>
+        <script>
+            var products = ["milk", "coffee", "juice", "lemonade", "beer", "sour milk"];
+            let products2 = products.map(myMapFunction);
+            let text = ""
+            products2.forEach(myFunction)
+            
+            document.getElementById("myTable").innerHTML = text;
+
+            function myFunction(value, index, array) {
+                text += "<tr><td>" + value + "</td></tr>";
+            }
+
+            function myMapFunction(value, index) {
+               let newValue = (index + 1) + ": " + value
+               return newValue
+            }
+        </script>
+    </body>
+</html>

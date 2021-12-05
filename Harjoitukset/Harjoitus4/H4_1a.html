@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <h2>Products</h2>
+        <p id="demo"></p>
+        <script>
+            var products = ["milk", "coffee", "juice", "lemonade", "beer", "sour milk"];
+            let text = "";
+            products.forEach(myFunction);
+            document.getElementById("demo").innerHTML = text;
+
+            function myFunction(value) {
+                text += value + "<br>";
+            }
+        </script>
+    </body>
+</html>
