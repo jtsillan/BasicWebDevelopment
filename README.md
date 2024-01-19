@@ -1,3 +1,2 @@
-# Juha_Sillanpää - web-kehitys
+# Cource Assigments for Web Development
 
-Web-kehityksen tehtävät
